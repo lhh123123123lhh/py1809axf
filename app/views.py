@@ -2,9 +2,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-from app.models import Wheel, Nav, Mustbuy, Shop, Mainshow
+from app.models import Wheel, Nav, Mustbuy, Shop, Mainshow, Foodtypes, Goods
 
 
+# 首页
 def index(request):
     wheels = Wheel.objects.all()
     navs = Nav.objects.all()
@@ -31,8 +32,30 @@ def cart(request):
     return render(request, 'cart/cart.html')
 
 
-def market(request):
-    return render(request, 'market/market.html')
+# 闪购超市
+def market(request, categoryid, childid):
+    type_list = Foodtypes.objects.all()  # 分类数据
+
+    # 子类数据
+    typeIndex = int(request.COOKIES.get('typeIndex', 0))
+    childtypenames = type_list[typeIndex].childtypenames
+    categoryid = type_list[typeIndex].typeid
+    childtypeList = []
+    for str1 in childtypenames.split('#'):
+        str2 = str1.split(':')
+        obj = {'childname': str2[0], 'childid': str2[1]}
+        childtypeList.append(obj)
+    if childid == '0':
+        goods_list = Goods.objects.filter(categoryid=categoryid)# 商品数据
+    else:
+        goods_list = Goods.objects.filter(categoryid=categoryid, childcid=childid)
+    date = {
+        'type_list': type_list,
+        'goods_list': goods_list,
+        'childtypeList': childtypeList,
+        'categoryid': categoryid,
+    }
+    return render(request, 'market/market.html', context=date)
 
 
 def mine(request):

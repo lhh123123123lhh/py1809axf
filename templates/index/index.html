@@ -9,6 +9,7 @@
 
 
 {% block content %}
+    <div class="index">
     <div class="swiper-container" id="topSwiper">
         <div class="swiper-wrapper">
             {% for wheel in wheels %}
@@ -78,45 +79,45 @@
             <div class="main-wrapper">
                 <!--标题-->
                 <h3 class="title">
-                    {{item.name}}
+                    {{ item.name }}
                     <a href="#">更多</a>
                     <span></span>
                 </h3>
 
                 <!--图片-->
                 <div class="headimg">
-                    <a href="#"><img src="{{item.img}}"></a>
+                    <a href="#"><img src="{{ item.img }}"></a>
                 </div>
 
                 <!--具体商品-->
                 <ul class="shoplist">
-                   <li class="shopitem">
-                       <a href="#">
-                           <img class="img" src="{{item.img1}}">
-                           <span class="desc">{{item.longname1}}</span>
-                           <span class="price">￥{{item.price1}}</span>
-                           <span class="marketprice">￥{{item.marketprice1}}</span>
-                       </a>
-                       <button><span>&#43;</span></button>
-                   </li>
                     <li class="shopitem">
-                       <a href="#">
-                           <img class="img" src="{{item.img2}}">
-                           <span class="desc">{{item.longname2}}</span>
-                           <span class="price">￥{{item.price2}}</span>
-                           <span class="marketprice">￥{{item.marketprice2}}</span>
-                       </a>
-                       <button><span>&#43;</span></button>
-                   </li>
+                        <a href="#">
+                            <img class="img" src="{{ item.img1 }}">
+                            <span class="desc">{{ item.longname1 }}</span>
+                            <span class="price">￥{{ item.price1 }}</span>
+                            <span class="marketprice">￥{{ item.marketprice1 }}</span>
+                        </a>
+                        <button><span>&#43;</span></button>
+                    </li>
                     <li class="shopitem">
-                       <a href="#">
-                           <img class="img" src="{{item.img3}}">
-                           <span class="desc">{{item.longname3}}</span>
-                           <span class="price">￥{{item.price3}}</span>
-                           <span class="marketprice">￥{{item.marketprice3}}</span>
-                       </a>
-                       <button><span>&#43;</span></button>
-                   </li>
+                        <a href="#">
+                            <img class="img" src="{{ item.img2 }}">
+                            <span class="desc">{{ item.longname2 }}</span>
+                            <span class="price">￥{{ item.price2 }}</span>
+                            <span class="marketprice">￥{{ item.marketprice2 }}</span>
+                        </a>
+                        <button><span>&#43;</span></button>
+                    </li>
+                    <li class="shopitem">
+                        <a href="#">
+                            <img class="img" src="{{ item.img3 }}">
+                            <span class="desc">{{ item.longname3 }}</span>
+                            <span class="price">￥{{ item.price3 }}</span>
+                            <span class="marketprice">￥{{ item.marketprice3 }}</span>
+                        </a>
+                        <button><span>&#43;</span></button>
+                    </li>
                 </ul>
             </div>
         {% endfor %}
@@ -128,3 +129,4 @@
 {% block EXTJS %}
     <script src="{% static 'index/js/index.js' %}"></script>
 {% endblock %}
+</div>

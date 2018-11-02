@@ -5,25 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'base/css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'base/css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'base/css/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
-    {#    标题 #}
+    {#   标题#}
     {% block title %}
     {% endblock %}
 
-    {#    样式表#}
+    {#   样式表#}
     {% block EXTCSS %}
     {% endblock %}
-
 </head>
 <body>
-{#   头部 #}
+
+{# 头部#}
 {% block header %}
     <header>爱鲜蜂</header>
 {% endblock %}
 
-{#   身体 #}
+
+{# 主体内容#}
 <div class="hidescroll">
     <div id="content">
         {% block content %}
@@ -31,58 +32,43 @@
     </div>
 </div>
 
-{#    尾部 #}
-
+{# 尾部#}
 {% block footer %}
     <footer>
         <a href="{% url 'app:index' %}" class="index">
             <dl>
-                <dt>
-                    <span></span>
-                </dt>
-                <dd>
-                    首页
-                </dd>
+                <dt><span></span></dt>
+                <dd> 首页</dd>
             </dl>
         </a>
-        <a href="{% url 'app:market' %}" class="market">
+        <a href="{% url 'app:market' 104749 0 %}" class="market">
             <dl>
-                <dt>
-                    <span></span>
-                </dt>
-                <dd>
-                    闪购超市
-                </dd>
+                <dt><span></span></dt>
+                <dd> 闪购超市 </dd>
             </dl>
         </a>
         <a href="{% url 'app:cart' %}" class="cart">
             <dl>
-                <dt>
-                    <span></span>
-                </dt>
-                <dd>
-                    购物车
-                </dd>
+                <dt><span></span></dt>
+                <dd> 购物车</dd>
             </dl>
         </a>
         <a href="{% url 'app:mine' %}" class="mine">
             <dl>
-                <dt>
-                    <span></span>
-                </dt>
-                <dd>
-                    我的
-                </dd>
+                <dt><span></span></dt>
+                <dd> 个人中心 </dd>
             </dl>
         </a>
     </footer>
 {% endblock %}
 
+
 <script src="{% static 'base/js/jquery.js' %}"></script>
+<script src="{% static 'base/js/jquery.cookie.js' %}"></script>
 <script src="{% static 'base/js/bootstrap.js' %}"></script>
 <script src="{% static 'base/js/swiper.js' %}"></script>
 <script src="{% static 'base/js/base.js' %}"></script>
-{#  JS #}
+{# JS#}
 {% block EXTJS %}
 {% endblock %}
 </body>

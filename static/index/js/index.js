@@ -11,9 +11,6 @@ $(function () {
     var mustbuySwiper = new Swiper('#mustbuySwiper', {
         slidesPerView: 3,
         spaceBetween: 7,
-        loop: true,
-        pagination: {
-            clickable: true,
-        },
+        loop: true
     })
 })
