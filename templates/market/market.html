@@ -16,7 +16,7 @@
                 {% for type in type_list %}
                     <li class="list1">
                         <span></span>
-                        <a href="{% url 'app:market' type.typeid 0 %}"> {{ type.typename }}</a>
+                        <a href="{% url 'app:market' type.typeid 0 1 %}"> {{ type.typename }}</a>
                     </li>
                 {% endfor %}
 
@@ -74,7 +74,7 @@
             <div class="bounce-view type-view">
                 <div class="bounce-wrapper ">
                     {% for child in childtypeList %}
-                        <a href="{% url 'app:market' categoryid child.childid %}">
+                        <a href="{% url 'app:market' categoryid child.childid 1%}">
                             {{ child.childname }}
                         </a>
                     {% endfor %}
@@ -82,10 +82,10 @@
             </div>
             <div class="bounce-view sort-view">
                 <div class="bounce-wrapper">
-                    <a href="#">综合排序</a>
-                    <a href="#">销量排序</a>
-                    <a href="#">价格最低</a>
-                    <a href="#">价格最高</a>
+                    <a href="{% url 'app:market' categoryid childid 1 %}">综合排序</a>
+                    <a href="{% url 'app:market' categoryid childid 2 %}">销量排序</a>
+                    <a href="{% url 'app:market' categoryid childid 3 %}">价格最低</a>
+                    <a href="{% url 'app:market' categoryid childid 4 %}">价格最高</a>
                 </div>
             </div>
         </div>

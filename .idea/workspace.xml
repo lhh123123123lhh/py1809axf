@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5945629e-c088-402b-ad9a-e0fd9f944c5b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/base/js/jquery.cookie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc067540-fd5b-4db4-af1b-a5b5b6ecf2d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc067540-fd5b-4db4-af1b-a5b5b6ecf2d4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/base/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/base/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/base/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/base/js/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/index/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/index/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/market/css/market.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/market/css/market.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/market/js/market.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/market/js/market.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/market/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/market/market.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,14 +49,14 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.64066195">
+    <splitter split-orientation="horizontal" split-proportion="0.6004728">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="50" column="82" lean-forward="true" selection-start-line="50" selection-start-column="82" selection-end-line="50" selection-end-column="82" />
+                <state relative-caret-position="450">
+                  <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                     <element signature="e#185#803#0" />
@@ -75,24 +65,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="market.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="market.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/market/market.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="93">
-                  <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+                <state relative-caret-position="-404">
+                  <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
                   <folding>
                     <element signature="e#601#928#0#HTML" />
-                    <element signature="e#1093#2123#0#HTML" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/base/base.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="287">
-                  <caret line="49" column="52" lean-forward="true" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
@@ -101,43 +81,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="market.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/market/css/market.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#8#71#0" />
-                    <element signature="e#93#153#0" />
-                    <element signature="e#173#196#0" />
-                    <element signature="e#219#389#0" />
-                    <element signature="e#415#418#0" />
-                    <element signature="e#447#600#0" />
-                    <element signature="e#634#772#0" />
-                    <element signature="e#811#834#0" />
-                    <element signature="e#865#868#0" />
-                    <element signature="e#892#1107#0" />
-                    <element signature="e#1124#1182#0" />
-                    <element signature="e#1202#1221#0" />
-                    <element signature="e#1246#1272#0" />
-                    <element signature="e#1299#1327#0" />
-                    <element signature="e#1363#1497#0" />
-                    <element signature="e#1538#1598#0" />
-                    <element signature="e#1693#1828#0" />
-                    <element signature="e#1877#1918#0" />
-                    <element signature="e#1978#2036#0" />
-                    <element signature="e#2097#2160#0" />
-                    <element signature="e#2227#2375#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="market.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/market/js/market.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="795">
-                  <caret line="53" column="2" lean-forward="true" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
+                  <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -147,24 +95,6 @@
               <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
                 <state>
                   <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="axf_foodtypes" pinned="false" current-in-tab="false">
-            <entry file="das://bc067540-fd5b-4db4-af1b-a5b5b6ecf2d4/schema/axf/table/axf_foodtypes">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
                 </state>
               </provider>
             </entry>
@@ -215,11 +145,11 @@
         <option value="$PROJECT_DIR$/static/market/css/market.css" />
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/bc067540-fd5b-4db4-af1b-a5b5b6ecf2d4/console.sql" />
-        <option value="$PROJECT_DIR$/static/market/js/market.js" />
-        <option value="$PROJECT_DIR$/templates/market/market.html" />
         <option value="$PROJECT_DIR$/app/urls.py" />
-        <option value="$PROJECT_DIR$/templates/base/base.html" />
+        <option value="$PROJECT_DIR$/templates/market/market.html" />
         <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/templates/base/base.html" />
+        <option value="$PROJECT_DIR$/static/market/js/market.js" />
       </list>
     </option>
   </component>
@@ -291,6 +221,12 @@
               <item name="AXF" type="b2602c69:ProjectViewProjectNode" />
               <item name="AXF" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AXF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AXF" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AXF" type="b2602c69:ProjectViewProjectNode" />
@@ -394,7 +330,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.562724" weight="0.32980973" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28237128" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28081122" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.4555382" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.2671395" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -628,10 +564,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc067540-fd5b-4db4-af1b-a5b5b6ecf2d4/console.sql">
+    <entry file="file://$PROJECT_DIR$/templates/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="830" lean-forward="true" selection-end-line="830" />
+        <state relative-caret-position="1590">
+          <caret line="121" column="18" lean-forward="true" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/base/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="108" column="50" lean-forward="true" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
+          <folding>
+            <element signature="e#88#305#0" />
+            <element signature="e#331#373#0" />
+            <element signature="e#397#437#0" />
+            <element signature="e#465#509#0" />
+            <element signature="e#534#575#0" />
+            <element signature="e#612#1796#0" />
+            <element signature="e#1834#2118#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#185#803#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -642,10 +619,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index/index.html">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bc067540-fd5b-4db4-af1b-a5b5b6ecf2d4/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="121" column="18" lean-forward="true" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
+        <state relative-caret-position="555">
+          <caret line="830" lean-forward="true" selection-end-line="830" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -682,55 +666,7 @@
     <entry file="file://$PROJECT_DIR$/static/market/js/market.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
-          <caret line="53" column="2" lean-forward="true" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="49" column="52" lean-forward="true" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/base/js/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/market/market.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-          <folding>
-            <element signature="e#601#928#0#HTML" />
-            <element signature="e#1093#2123#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="108" column="50" lean-forward="true" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
-          <folding>
-            <element signature="e#88#305#0" />
-            <element signature="e#331#373#0" />
-            <element signature="e#397#437#0" />
-            <element signature="e#465#509#0" />
-            <element signature="e#534#575#0" />
-            <element signature="e#612#1796#0" />
-            <element signature="e#1834#2118#0" />
-          </folding>
+          <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -741,13 +677,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/market/market.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="50" column="82" lean-forward="true" selection-start-line="50" selection-start-column="82" selection-end-line="50" selection-end-column="82" />
+        <state relative-caret-position="-404">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <element signature="e#185#803#0" />
+            <element signature="e#601#928#0#HTML" />
           </folding>
         </state>
       </provider>

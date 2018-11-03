@@ -33,7 +33,7 @@ def cart(request):
 
 
 # 闪购超市
-def market(request, categoryid, childid):
+def market(request, categoryid, childid, sortid):
     type_list = Foodtypes.objects.all()  # 分类数据
 
     # 子类数据
@@ -45,15 +45,24 @@ def market(request, categoryid, childid):
         str2 = str1.split(':')
         obj = {'childname': str2[0], 'childid': str2[1]}
         childtypeList.append(obj)
+
     if childid == '0':
         goods_list = Goods.objects.filter(categoryid=categoryid)# 商品数据
     else:
         goods_list = Goods.objects.filter(categoryid=categoryid, childcid=childid)
+
+    if sortid == '2':
+        goods_list = goods_list.order_by('productnum')
+    elif sortid == '3':
+        goods_list = goods_list.order_by('price')
+    elif sortid == '4':
+        goods_list = goods_list.order_by('-price')
     date = {
         'type_list': type_list,
         'goods_list': goods_list,
         'childtypeList': childtypeList,
         'categoryid': categoryid,
+        'childid': childid,
     }
     return render(request, 'market/market.html', context=date)
 
