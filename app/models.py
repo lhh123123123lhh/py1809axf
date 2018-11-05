@@ -116,3 +116,24 @@ class Goods(models.Model):
 
     class Meta:
         db_table = 'axf_goods'
+
+
+class User(models.Model):
+    # 账号
+    account = models.CharField(max_length=20, unique=True)
+    # 密码
+    password = models.CharField(max_length=256)
+    # 用户名
+    name = models.CharField(max_length=50)
+    # 手机号
+    tel = models.CharField(max_length=20, unique=True)
+    # 地址
+    address = models.CharField(max_length=100)
+    # 图片
+    img = models.CharField(max_length=50)
+    # 等级
+    rank = models.CharField(max_length=10, default=1)
+    token = models.CharField(max_length=256)
+
+    class Meta:
+        db_table = 'axf_user'

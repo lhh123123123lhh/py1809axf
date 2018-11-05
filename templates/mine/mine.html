@@ -4,12 +4,101 @@
     <link rel="stylesheet" href="{% static 'mine/css/mine.css' %}">
 {% endblock %}
 {% block title %}
-<title>我的</title>
+    <title>我的</title>
 {% endblock %}
 
 
 {% block content %}
-我的
+    <div class="mine">
+        <div class="user-wrapper">
+            <div class="user-img">
+                <img src="{{ img }}">
+            </div>
+            <div class="user-content">
+                <p>
+                    <a href="{% url 'app:login' %}">
+                        <span class="glyphicon glyphicon-user">{{ name }}</span>
+                    </a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-tower"> VIP: {{ rank |default:'暂无等级' }}</span>
+                </p>
+                <a href="{% url 'app:register' %}">
+                    <div class="register">注册</div>
+                </a>
+            </div>
+        </div>
+        <div class="collect">
+            <a href="#">
+                <span class="glyphicon glyphicon-heart-empty">收藏</span>
+            </a>
+        </div>
+        <div class="other">
+            <section class="my">
+                <span>我的订单</span>
+                <a href="＃">查看全部订单 <b class="glyphicon glyphicon-chevron-right"></b> </a>
+            </section>
+            <section>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="glyphicon glyphicon-shopping-cart"></dt>
+                            <dd>待付款</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="glyphicon glyphicon-gift"></dt>
+                            <dd>待收货</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="glyphicon glyphicon-comment"></dt>
+                            <dd>待评价</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="glyphicon glyphicon-envelope"></dt>
+                            <dd>退款｜售后</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt class="glyphicon glyphicon-fire"></dt>
+                            <dd>优惠券</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="glyphicon glyphicon-send"></dt>
+                            <dd>收货地址</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="glyphicon glyphicon-bell"></dt>
+                            <dd>客户反馈</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt class="glyphicon glyphicon-thumbs-up"></dt>
+                            <dd>关于我们</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </section>
+            <div class="quit">
+                <a href="{% url 'app:logout' %}">退出登录　<i class="glyphicon glyphicon-log-out"></i></a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 {% block EXTJS %}
     <script src="{% static 'mine/js/mine.js' %}"></script>
