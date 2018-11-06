@@ -62,9 +62,15 @@
                                 </div>
                             </a>
                             <div class="bt-wrapper">
-                                <span class="glyphicon glyphicon-minus"></span>
-                                <span class="num">0</span>
-                                <span class="glyphicon glyphicon-plus"></span>
+                                <span class="glyphicon glyphicon-minus" goodsid="{{ goods.id }}"></span>
+                                <span class="num">
+                                    {% for cart in carts %}
+                                        {% if goods.id == cart.goods_id %}
+                                            {{ cart.number }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </span>
+                                <span class="glyphicon glyphicon-plus" goodsid="{{ goods.id }}"></span>
                             </div>
                         </li>
                     {% endfor %}
@@ -74,7 +80,7 @@
             <div class="bounce-view type-view">
                 <div class="bounce-wrapper ">
                     {% for child in childtypeList %}
-                        <a href="{% url 'app:market' categoryid child.childid 1%}">
+                        <a href="{% url 'app:market' categoryid child.childid 1 %}">
                             {{ child.childname }}
                         </a>
                     {% endfor %}

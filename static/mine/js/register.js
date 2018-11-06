@@ -7,7 +7,6 @@ $(function () {
 
         var reg = /^(\w){8,12}$/
         var flag = reg.test($(this).val())
-        console.log(flag)
         if (flag) {
             $.get('/checkaccount/', {'account': $(this).val()}, function (data) {
                 if (data['status'] == 1) {

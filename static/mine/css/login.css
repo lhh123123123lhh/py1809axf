@@ -22,3 +22,10 @@
 #subButton {
     width: 100%;
 }
+.glyphicon-remove{
+    color:red;
+}
+
+.glyphicon-ok{
+    color: green;
+}

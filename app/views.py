@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from AXF import settings
-from app.models import Wheel, Nav, Mustbuy, Shop, Mainshow, Foodtypes, Goods, User
+from app.models import Wheel, Nav, Mustbuy, Shop, Mainshow, Foodtypes, Goods, User, Cart
 
 
 # 首页
@@ -34,7 +34,14 @@ def index(request):
 
 
 def cart(request):
-    return render(request, 'cart/cart.html')
+    token = request.COOKIES.get('token')
+    if token:  # 显示该用户下 购物车信息
+        user = User.objects.get(token=token)
+        carts = Cart.objects.filter(user=user).exclude(number=0)
+
+        return render(request, 'cart/cart.html', context={'carts': carts})
+    else:  # 跳转到登录页面
+        return redirect('axf:login')
 
 
 # 闪购超市
@@ -62,12 +69,20 @@ def market(request, categoryid, childid, sortid):
         goods_list = goods_list.order_by('price')
     elif sortid == '4':
         goods_list = goods_list.order_by('-price')
+
+    # 购物车数据
+    token = request.COOKIES.get('token')
+    carts = []
+    if token:
+        user = User.objects.get(token=token)
+        carts = Cart.objects.filter(user=user)
     date = {
         'type_list': type_list,
         'goods_list': goods_list,
         'childtypeList': childtypeList,
         'categoryid': categoryid,
         'childid': childid,
+        'carts': carts,
     }
     return render(request, 'market/market.html', context=date)
 
@@ -142,4 +157,76 @@ def logout(request):
 
 # 登录
 def login(request):
-    return render(request,'mine/login.html')
+    if request.method == 'GET':
+        return render(request, 'mine/login.html')
+    elif request.method == 'POST':
+        account = request.POST.get('account')
+        password = generate_password(request.POST.get('password'))
+        try:
+            user = User.objects.get(account=account)
+            if user.password == password:  # 登录成功
+
+                # 更新token
+                user.token = str(uuid.uuid5(uuid.uuid4(), 'login'))
+                user.save()
+                response = redirect('app:mine')
+                response.set_cookie('token', user.token)
+                return response
+            else:  # 登录失败
+                return render(request, 'mine/login.html', context={'passwdErr': '密码错误!'})
+        except:
+            return render(request, 'mine/login.html', context={'acountErr': '账号不存在!'})
+
+
+# 添加到购物车
+def addToCart(request):
+    goodsid = request.GET.get('goodsid')
+    token = request.COOKIES.get('token')
+
+    responseData = {
+        'msg': '添加购物车成功',
+        'status': 1
+    }
+    if token:
+        user = User.objects.get(token=token)
+        goods = Goods.objects.get(pk=goodsid)
+        carts = Cart.objects.filter(user=user).filter(goods=goods)
+        if carts.exists():
+            cart = carts.first()
+            cart.number = int(cart.number) + 1
+            cart.save()
+            responseData['number'] = cart.number
+        else:
+            cart = Cart()
+            cart.user = user
+            cart.goods = goods
+            cart.number = 1
+            cart.save()
+            responseData['number'] = cart.number
+        return JsonResponse(responseData)
+    else:
+        responseData['msg'] = '未登录，请登录后操作'
+        responseData['status'] = -1
+        return JsonResponse(responseData)
+
+
+# 从购物车删减
+def subToCart(request):
+    token = request.COOKIES.get('token')
+    goodsid = request.GET.get('goodsid')
+
+    user = User.objects.get(token=token)
+    goods = Goods.objects.get(pk=goodsid)
+
+    # 删减操作
+    cart = Cart.objects.filter(user=user).filter(goods=goods).first()
+    cart.number = int(cart.number) - 1
+    cart.save()
+
+    responseData = {
+        'msg': '购物车减操作成功',
+        'status': 1,
+        'number': cart.number
+    }
+
+    return JsonResponse(responseData)

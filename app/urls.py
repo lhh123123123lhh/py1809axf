@@ -12,4 +12,6 @@ urlpatterns = [
     url('^login/$', views.login, name='login'),
     url('^logout/$', views.logout, name='logout'),
     url('^checkaccount/$', views.checkaccount, name='checkaccount'),
+    url('^addToCart/$', views.addToCart, name='addToCart'),
+    url('^subToCart/$', views.subToCart, name='subToCart'),
 ]

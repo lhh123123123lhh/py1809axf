@@ -16,17 +16,19 @@
             {#            账号#}
             <div class="input-group" id="account">
                 <span class="input-group-addon">账号</span>
-                <input type="text" class="form-control" placeholder="请输入8~12位账号" name="account" required="required">
+                <input type="text" class="form-control" placeholder="请输入你的账号" name="account" required="required">
                 <b class="glyphicon form-control-feedback" aria-hidden="true"></b>
+                <i>{{ acountErr }}</i>
             </div>
             {#           密码 #}
             <div class="input-group" id="password">
                 <span class="input-group-addon">密码</span>
-                <input type="password" class="form-control" placeholder="请输入6~12位密码" name="password"
+                <input type="password" class="form-control" placeholder="请输入对应的密码" name="password"
                        required="required">
                 <b class="glyphicon form-control-feedback" aria-hidden="true"></b>
+                <i>{{ passwdErr }}</i>
             </div>
-            <input type="submit" id="subButton" value="登录" required="required">
+            <input type="button" id="subButton" value="登录" required="required">
         </form>
     </div>
 {% endblock %}
