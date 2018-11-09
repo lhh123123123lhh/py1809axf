@@ -73,8 +73,7 @@ $(function () {
             if (response.status == -1) {
                 window.open('/login/', target = "_self")
             } else if (response.status == 1) {
-                $that.prev().show().html(response.number)
-                $that.prev().prev().show()
+                $that.prev().html(response.number)
             }
 
         })
@@ -83,7 +82,6 @@ $(function () {
         // 商品ID
         var goodsid = $(this).attr('goodsid')
         var $that = $(this)
-
         // 发起ajax请求
         $.get('/subToCart/', {'goodsid': goodsid}, function (response) {
             console.log(response)

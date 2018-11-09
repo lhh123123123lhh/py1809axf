@@ -11,7 +11,14 @@ urlpatterns = [
     url('^register/$', views.register, name='register'),
     url('^login/$', views.login, name='login'),
     url('^logout/$', views.logout, name='logout'),
+
     url('^checkaccount/$', views.checkaccount, name='checkaccount'),
     url('^addToCart/$', views.addToCart, name='addToCart'),
     url('^subToCart/$', views.subToCart, name='subToCart'),
+
+    url('^select/$', views.select, name='select'),
+    url('^changeall/$', views.changeall, name='changeall'),
+
+    url(r'^generateorder/$', views.generateorder, name='generateorder'),
+    url(r'^orderinfo/(\d+)/$', views.orderinfo, name='orderinfo'),
 ]
