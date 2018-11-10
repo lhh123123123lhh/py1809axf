@@ -38,7 +38,7 @@ def index(request):
 def cart(request):
     token = request.COOKIES.get('token')
     if token:  # 显示该用户下 购物车信息
-        user = User.objects.get(token=token)
+        user = User.objects.filter(token=token).first()
         carts = Cart.objects.filter(user=user).exclude(number=0)
 
         return render(request, 'cart/cart.html', context={'carts': carts})
@@ -74,19 +74,28 @@ def market(request, categoryid, childid, sortid):
 
     # 购物车数据
     token = request.COOKIES.get('token')
-    carts = []
     if token:
-        user = User.objects.get(token=token)
+        user = User.objects.filter(token=token).first()
         carts = Cart.objects.filter(user=user)
-    date = {
-        'type_list': type_list,
-        'goods_list': goods_list,
-        'childtypeList': childtypeList,
-        'categoryid': categoryid,
-        'childid': childid,
-        'carts': carts,
-    }
-    return render(request, 'market/market.html', context=date)
+
+        date = {
+            'type_list': type_list,
+            'goods_list': goods_list,
+            'childtypeList': childtypeList,
+            'categoryid': categoryid,
+            'childid': childid,
+            'carts': carts,
+        }
+        return render(request, 'market/market.html', context=date)
+    else:
+        date = {
+            'type_list': type_list,
+            'goods_list': goods_list,
+            'childtypeList': childtypeList,
+            'categoryid': categoryid,
+            'childid': childid,
+        }
+        return render(request, 'market/market.html', context=date)
 
 
 # 我的
@@ -98,7 +107,7 @@ def mine(request):
         'img': '/static/uploads/uu.png'
     }
     if token:  # 登录
-        user = User.objects.get(token=token)
+        user = User.objects.filter(token=token).first()
         responseData['name'] = user.name
         responseData['rank'] = user.rank
         responseData['img'] = '/static/uploads/' + user.img

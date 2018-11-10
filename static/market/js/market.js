@@ -53,14 +53,17 @@ $(function () {
     })
 
 
-    $('.bt-wrapper .glyphicon-minus').hide()
-    $('.bt-wrapper .num').hide()
+    // $('.bt-wrapper .glyphicon-minus').hide()
+    // $('.bt-wrapper .num').hide()
 
     $('.bt-wrapper .num').each(function () {
         var num = $(this).html()
-        if (num) {   // 有数据，即有添加购物车
+        if (num > 0) {   // 有数据，即有添加购物车
             $(this).show()
             $(this).prev().show()
+        }else {
+            $(this).show()
+            $(this).prev().hide()
         }
     })
     // 加操作
@@ -73,9 +76,15 @@ $(function () {
             if (response.status == -1) {
                 window.open('/login/', target = "_self")
             } else if (response.status == 1) {
-                $that.prev().html(response.number)
-            }
+                if(response.number > 0){
+                    $that.prev().html(response.number).show()
+                    $that.prev().prev().show()
+                } else {
+                    $that.prev().html(response.number).hide()
+                    $that.prev().prev().hide()
+                }
 
+            }
         })
     })
     $('.bt-wrapper .glyphicon-minus').click(function () {
