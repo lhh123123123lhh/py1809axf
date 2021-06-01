@@ -66,7 +66,7 @@ SQLAlchemy==1.2.12
 tablib==0.12.1
 Twisted==18.9.0
 unicodecsv==0.14.1
-urllib3==1.23
+urllib3==1.26.5
 uWSGI==2.0.17.1
 virtualenv==16.0.0
 visitor==0.1.3
